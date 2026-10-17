@@ -1,0 +1,48 @@
+Core:
+  PPU Decoder: Recompiler (LLVM)
+  PPU Debug: false
+  Save LLVM logs: false
+  SPU Decoder: Recompiler (LLVM)
+  Preferred SPU Threads: 0
+  SPU loop detection: false
+  SPU Block Size: Safe
+  SPU XFloat Accuracy: Approximate
+  RSX FIFO Fetch Accuracy: "Ordered & Atomic"
+  Stub PPU Traps: 1
+Video:
+  Renderer: Vulkan
+  Resolution: 1280x720
+  Aspect ratio: 16:9
+  Frame limit: 60
+  MSAA: Auto
+  Shader Mode: Async Recompiler (multi-threaded)
+  VSync Mode: Disabled
+  Write Color Buffers: false
+  Write Depth Buffer: false
+  Multithreaded RSX: false
+  Relaxed ZCULL Sync: false
+  Resolution Scale: 300
+  Anisotropic Filter Override: 16
+  Texture LOD Bias Addend: -0.1
+  Minimum Scalable Dimension: 256
+  Driver Wake-Up Delay: 0
+  Output Scaling Mode: FidelityFX Super Resolution
+  FidelityFX CAS Sharpening Intensity: 4
+  Renderdoc Compatibility Mode: true
+  Vulkan:
+    Adapter: ""
+    Asynchronous Texture Streaming: false
+    Asynchronous Queue Scheduler: Safe
+    Use Re-BAR for GPU uploads: true
+Audio:
+  Renderer: Cubeb
+  Audio Format: Stereo
+  Enable Buffering: true
+  Desired Audio Buffer Duration: 60
+  Enable Time Stretching: true
+System:
+  Language: English (US)
+  Console Region: North America
+Miscellaneous:
+  Start games in fullscreen mode: true
+  Prevent display sleep while running games: true

@@ -1,0 +1,12 @@
+ rpcs3/Emu/CMakeLists.txt                           |    6 +
+ rpcs3/Emu/RSX/Core/RSXDrawCommands.cpp             |   11 +-
+ .../GLSLInterpreter/FragmentInterpreter.glsl       |    3 +-
+ .../GLSLSnippets/RSXProg/RSXFragmentPrologue.glsl  |    7 +-
+ rpcs3/Emu/RSX/Utils/rsx_utils.h                    |   27 +-
+ rpcs3/Emu/RSX/VK/VKDraw.cpp                        |   34 +-
+ rpcs3/Emu/RSX/VK/VKGSRender.cpp                    |   33 +-
+ rpcs3/Emu/RSX/VK/VKGSRender.h                      |    5 +
+ rpcs3/Emu/RSX/VK/VKPresent.cpp                     | 1879 +++++++++++++++++++-
+ rpcs3/Emu/RSX/VK/VKRenderTargets.cpp               |   14 +
+ rpcs3/Emu/RSX/VK/VKRenderTargets.h                 |    2 +
+ 11 files changed, 2010 insertions(+), 11 deletions(-)

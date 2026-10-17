@@ -1,0 +1,47 @@
+PPU-6bb4db395550102f567fb7b1dbbf81583417150f:
+  "60 FPS":
+    Twisted Metal:
+      BCUS98106:
+        01.06:
+          Enabled: true
+  "PostFX Sharp Fast":
+    Twisted Metal:
+      BCUS98106:
+        01.06:
+          Enabled: true
+  "Raw 4K Scene":
+    Twisted Metal:
+      BCUS98106:
+        01.06:
+          Enabled: false
+  "Extend Draw Distance":
+    Twisted Metal:
+      BCUS98106:
+        01.06:
+          Enabled: true
+  "Model LOD Distance +50%":
+    Twisted Metal:
+      BCUS98106:
+        01.06:
+          Enabled: false
+  "Model LOD Distance +100% (2x)":
+    Twisted Metal:
+      BCUS98106:
+        01.06:
+          Enabled: false
+  "Model LOD Distance x4":
+    Twisted Metal:
+      BCUS98106:
+        01.06:
+          Enabled: false
+  "Force Near Model LOD - distance zero test":
+    Twisted Metal:
+      BCUS98106:
+        01.06:
+          Enabled: false
+SPU-82b3399c8e6533ba991eedb0e139bf20c7783bac:
+  "Disable SPU MLAA - Twisted Metal, Resident Evil: Operation Raccoon City":
+    All:
+      All:
+        All:
+          Enabled: true

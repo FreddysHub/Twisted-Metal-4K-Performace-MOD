@@ -1,0 +1,2 @@
+Enable the experimental packed Alpha reconstruction from checkpoint 2026-10-01-packed-alpha.
+Complete emulator restart required; omit this flag to use the previous C shader path.

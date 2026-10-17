@@ -1,0 +1,3 @@
+User-selected variant C = LIT luma 1 @ 0.1, 2026-10-01.
+Requires tm4k-enable.flag and tm4k-lit01-enable.flag.
+Remove/rename this flag and restart RPCS3 to return to LIT 0.1.

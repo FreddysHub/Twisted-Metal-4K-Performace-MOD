@@ -1,0 +1,26 @@
+warning: in the working copy of 'rpcs3/Emu/CMakeLists.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/Utils/rsx_utils.h', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKDraw.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKGSRender.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKGSRender.h', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKPresent.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKRenderTargets.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKRenderTargets.h', LF will be replaced by CRLF the next time Git touches it
+
+warning: in the working copy of 'rpcs3/Emu/CMakeLists.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/Utils/rsx_utils.h', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKDraw.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKGSRender.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKGSRender.h', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKPresent.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKRenderTargets.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKRenderTargets.h', LF will be replaced by CRLF the next time Git touches it
+
+warning: in the working copy of 'rpcs3/Emu/CMakeLists.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/Utils/rsx_utils.h', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKDraw.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKGSRender.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKGSRender.h', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKPresent.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKRenderTargets.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rpcs3/Emu/RSX/VK/VKRenderTargets.h', LF will be replaced by CRLF the next time Git touches it

@@ -1,0 +1,20 @@
+ M rpcs3/Emu/CMakeLists.txt
+ M rpcs3/Emu/RSX/Core/RSXDrawCommands.cpp
+ M rpcs3/Emu/RSX/Program/GLSLInterpreter/FragmentInterpreter.glsl
+ M rpcs3/Emu/RSX/Program/GLSLSnippets/RSXProg/RSXFragmentPrologue.glsl
+ M rpcs3/Emu/RSX/Utils/rsx_utils.h
+ M rpcs3/Emu/RSX/VK/VKDraw.cpp
+ M rpcs3/Emu/RSX/VK/VKGSRender.cpp
+ M rpcs3/Emu/RSX/VK/VKGSRender.h
+ M rpcs3/Emu/RSX/VK/VKPresent.cpp
+ M rpcs3/Emu/RSX/VK/VKRenderTargets.cpp
+ M rpcs3/Emu/RSX/VK/VKRenderTargets.h
+?? rpcs3/Emu/RSX/VK/TM4KAffine.hpp
+?? rpcs3/Emu/RSX/VK/TM4KDrawGuard.hpp
+?? rpcs3/Emu/RSX/VK/TM4KHybrid.hpp
+?? rpcs3/Emu/RSX/VK/TM4KMaster.hpp
+?? rpcs3/Emu/RSX/VK/TM4KMicro.hpp
+?? rpcs3/Emu/RSX/VK/TM4KNativeColour.hpp
+?? rpcs3/Emu/RSX/VK/TM4KParticles.hpp
+?? rpcs3/Emu/RSX/VK/TM4KTiming.hpp
+?? rpcs3/Emu/RSX/VK/VKPresent.cpp.bak-before-ramming-fix

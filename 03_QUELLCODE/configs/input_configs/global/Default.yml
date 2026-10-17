@@ -1,0 +1,53 @@
+Player 1 Input:
+  Handler: XInput
+  Device: "XInput Pad #1"
+  Buddy Device: XInput
+  Config:
+    Left Stick Left: LS X-
+    Left Stick Down: LS Y-
+    Left Stick Right: LS X+
+    Left Stick Up: LS Y+
+    Right Stick Left: RS X-
+    Right Stick Down: RS Y-
+    Right Stick Right: RS X+
+    Right Stick Up: RS Y+
+    Start: Start
+    Select: Back
+    PS Button: Guide,Back&Start
+    Square: X
+    Cross: A
+    Circle: B
+    Triangle: Y
+    Left: Left
+    Down: Down
+    Right: Right
+    Up: Up
+    R1: RB
+    R2: RT
+    R3: RS
+    L1: LB
+    L2: LT
+    L3: LS
+    Pressure Intensity Button: ""
+    Pressure Intensity Percent: 50
+    Pressure Intensity Toggle Mode: false
+    Pressure Intensity Deadzone: 0
+    Analog Limiter Button: ""
+    Analog Limiter Toggle Mode: false
+    Left Stick Multiplier: 100
+    Right Stick Multiplier: 100
+    Left Stick Deadzone: 7849
+    Right Stick Deadzone: 8689
+    Left Stick Anti-Deadzone: 4259
+    Right Stick Anti-Deadzone: 4259
+    Left Trigger Threshold: 30
+    Right Trigger Threshold: 30
+    Left Pad Squircling Factor: 4000
+    Right Pad Squircling Factor: 4000
+    Large Vibration Motor Multiplier: 100
+    Small Vibration Motor Multiplier: 100
+    Switch Vibration Motors: false
+    Vibration Threshold: 1
+    Device Class Type: 0
+    Vendor ID: 1356
+    Product ID: 616

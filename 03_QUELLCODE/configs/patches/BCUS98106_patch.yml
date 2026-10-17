@@ -1,0 +1,79 @@
+Version: 1.2
+
+PPU-6bb4db395550102f567fb7b1dbbf81583417150f:
+  "PostFX Sharp Fast":
+    Games:
+      "Twisted Metal":
+        BCUS98106: [ 01.06 ]
+    Author: "Local test derived from illusion's official demo research"
+    Notes: "Selective retail US 1.06 PostFX bypass. Keeps buffer initialization, bloom prerequisites and final tone-mapping/color-grading while disabling motion blur, MLAA and other heavy stages."
+    Patch Version: 0.5
+    Patch:
+      - [ be32, 0x0066aaf4, 0x60000000 ]
+      - [ be32, 0x0066ab30, 0x60000000 ]
+      - [ be32, 0x0066ab74, 0x60000000 ]
+      - [ be32, 0x0066ab84, 0x60000000 ]
+      - [ be32, 0x0066ab90, 0x60000000 ]
+      - [ be32, 0x0066ab9c, 0x60000000 ]
+      - [ be32, 0x0066aba8, 0x60000000 ]
+      - [ be32, 0x0066abb4, 0x60000000 ]
+      - [ be32, 0x0066abc0, 0x60000000 ]
+      - [ be32, 0x0066ac1c, 0x60000000 ]
+      - [ be32, 0x0066ac38, 0x60000000 ]
+  "Raw 4K Scene":
+    Games:
+      "Twisted Metal":
+        BCUS98106: [ 01.06 ]
+    Author: "Local resolution-scaling experiment"
+    Notes: "Add-on to the selective PostFX patch. Bypasses the remaining native-resolution bloom prerequisites and final SPU tone-map composite so the 300% RSX scene can reach the output directly."
+    Patch Version: 0.1
+    Patch:
+      - [ be32, 0x0066abcc, 0x60000000 ]
+      - [ be32, 0x0066abd8, 0x60000000 ]
+      - [ be32, 0x0066abe4, 0x60000000 ]
+  "Extend Draw Distance":
+    Games:
+      "Twisted Metal":
+        BCUS98106: [ 01.06 ]
+    Author: "Antigravity"
+    Notes: "Extends camera Far Clip to 10,000.0f and world fog distance to 16,000.0f (calibrated for 1.06 PPU constant pool)."
+    Patch Version: 1.1
+    Patch:
+      - [ bef32, 0x002106d4, 10000.0 ]
+      - [ bef32, 0x002106f8, 16000.0 ]
+  "Model LOD Distance +50%":
+    Games:
+      "Twisted Metal":
+        BCUS98106: [ 01.06 ]
+    Author: "Antigravity"
+    Notes: "Scales the HierLOD distance input from 1.0 to 0.6667 (squared to 0.4444). Extends the draw distance of high-detail model LODs (window shutters, woodwork, tree details) by 50% into the distance (1.5x range) before switching to low-poly/billboard."
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x0010e83c, 0.6667 ]
+  "Model LOD Distance +100% (2x)":
+    Games:
+      "Twisted Metal":
+        BCUS98106: [ 01.06 ]
+    Author: "Antigravity"
+    Notes: "Scales the HierLOD distance input from 1.0 to 0.50 (squared to 0.25). Doubles the draw distance of high-detail model LODs (2.0x range)."
+    Patch Version: 1.0
+    Patch:
+      - [ bef32, 0x0010e83c, 0.50 ]
+  "Model LOD Distance x4":
+    Games:
+      "Twisted Metal":
+        BCUS98106: [ 01.06 ]
+    Author: "Local verified HierLod reset-factor test"
+    Notes: "Changes the model LOD reset input from 1.0 to 0.25; the game squares it to 0.0625. Effective LOD distance is quartered, preserving near-detail models approximately four times farther away. Global model selector, not a proven tree-only streaming control. No blur, colour or physical camera-coordinate changes."
+    Patch Version: 0.1
+    Patch:
+      - [ bef32, 0x0010e83c, 0.25 ]
+  "Force Near Model LOD - distance zero test":
+    Games:
+      "Twisted Metal":
+        BCUS98106: [ 01.06 ]
+    Author: "Local verified HierLOD distance test"
+    Notes: "Diagnostic near-model selection: reset input 0.0 makes the squared model distance 0.0. No sharpening or mip bias. Global model selectors, including any Xmas objects using them; independent effect LOD remains unproven. May increase CPU/GPU/memory costs. Isolated test only; keep x4 disabled to avoid a same-address conflict."
+    Patch Version: 0.1
+    Patch:
+      - [ bef32, 0x0010e83c, 0.0 ]

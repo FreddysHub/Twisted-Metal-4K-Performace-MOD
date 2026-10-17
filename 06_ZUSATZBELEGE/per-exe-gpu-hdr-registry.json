@@ -1,0 +1,20 @@
+[
+  {
+    "key": "HKCU:\\Software\\Microsoft\\DirectX\\UserGpuPreferences",
+    "exe": "C:\\Users\\box3\\Documents\\ChatGPT\\ps3\\rpcs3-live-4k\\build-msvc2026\\bin-twisted-metal-4k-sichtweite-test\\rpcs3.exe",
+    "present": true,
+    "value": "AppStatus=1;AutoHDREnable=2097;"
+  },
+  {
+    "key": "HKCU:\\Software\\Microsoft\\DirectX\\UserGpuPreferences",
+    "exe": "C:\\Users\\box3\\Documents\\ChatGPT\\ps3\\rpcs3-live-4k\\build-msvc2026\\bin-twisted-metal-4k-stabilitats-test\\rpcs3.exe",
+    "present": true,
+    "value": "AppStatus=1;AutoHDREnable=2097;"
+  },
+  {
+    "key": "HKCU:\\Software\\Microsoft\\DirectX\\UserGpuPreferences",
+    "exe": "C:\\Users\\box3\\Documents\\ChatGPT\\ps3\\rpcs3-live-4k\\build-msvc2026\\bin-twisted-metal-4k-echte-dichte\\rpcs3.exe",
+    "present": true,
+    "value": "AppStatus=1;AutoHDREnable=2097;"
+  }
+]

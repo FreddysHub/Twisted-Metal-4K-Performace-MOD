@@ -1,0 +1,21 @@
+# Twisted Metal 4K Remaster - Git Ignore
+# Exclude private workspace and massive capture archives (~160 GB)
+01_WORKSPACE/
+02_DESKTOP_SAMMLUNGEN/
+
+# Exclude compiled binaries and copyrighted local dumps
+04_RELEASE_SNAPSHOTS/bin-*/
+*.exe
+*.dll
+*.iso
+*.pkg
+*.psarc
+*.rdc
+
+# OS / Temporary files
+__pycache__/
+*.pyc
+Thumbs.db
+Desktop.ini
+*.tmp
+*.log
