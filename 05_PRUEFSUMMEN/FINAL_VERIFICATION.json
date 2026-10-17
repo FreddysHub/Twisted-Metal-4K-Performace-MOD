@@ -1,9 +1,0 @@
-{
-  "result": "PASS",
-  "collection_files_checked": 20501,
-  "metadata_check": "all collected files exist and sizes match; full SHA256 equality checked during assembly",
-  "source_patch_base_check": "PASS",
-  "supplementary_files": 49,
-  "clean_build_performed": false,
-  "game_started": false
-}

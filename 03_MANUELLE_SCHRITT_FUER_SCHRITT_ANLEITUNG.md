@@ -1,5 +1,7 @@
 # Manuelle Schritt-für-Schritt-Anleitung: Twisted Metal (2012) 4K Remaster
 
+> Aktuelle englische Referenz: [BUILD.md](BUILD.md). Voraussetzungen und Grenzen: [Teststatus](docs/REPRODUCTION.md). Lokale Beispielpfade müssen ersetzt werden.
+
 Diese Anleitung führt Entwickler, Modder und RPCS3-Enthusiasten Schritt für Schritt durch den manuellen Nachbau des 4K-Remasters von *Twisted Metal (PS3, 2012)* auf RPCS3 von Grund auf.
 
 ---
@@ -30,11 +32,7 @@ Für einen sauberen Nachbau ohne Abhängigkeit von bestehenden Installationen we
 ### A. Windows Smart App Control & SmartScreen
 - Unsere Modifikation verändert **nicht** den Windows-Grafikkartentreiber von AMD/NVIDIA (keine Kernel-Ebene betroffen), sondern ausschließlich den lokalen User-Space-Vulkan-Renderer von RPCS3.
 - Da `rpcs3.exe` lokal kompiliert wird (unsigniert), kann Windows SmartScreen oder Smart App Control den Start blockieren.
-- **Empfehlung:** Nicht den globalen Virenschutz abschalten, sondern eine gezielte Defender-Ausnahme für das Build-Verzeichnis setzen (erfordert Adminrechte):
-  ```powershell
-  Add-MpPreference -ExclusionPath "C:\tm4k\build"
-  ```
-  Falls keine Adminrechte vorliegen, starte PowerShell auf Prozessebene mit `-ExecutionPolicy RemoteSigned`.
+- Keine automatischen Defender-Ausnahmen setzen und keine globalen Schutzfunktionen abschalten. ExecutionPolicy behebt keine Smart-App-Control-Blockade. Den konkreten Startfehler separat untersuchen.
 
 ### B. Pfadlängenbegrenzung (MAX_PATH = 260 Zeichen)
 - Durch tief verschachtelte Git-Submodule (insbesondere innerhalb von LLVM-Testsuiten) kann der Windows-Standardpfad von 260 Zeichen überschritten werden.
@@ -60,18 +58,18 @@ git -c core.longpaths=true submodule update --init --recursive --jobs 8
 ### Schritt 3.2: Patch anwenden & Overlay kopieren
 1. Wende den gesicherten Patch aus dem Dossier an:
    ```powershell
-   git apply "C:\Users\box3\Desktop\Twisted Metal - Gesamtdossier\03_QUELLCODE\tracked-changes.patch"
+   git apply "C:\path\to\mod-repository\03_QUELLCODE\tracked-changes.patch"
    ```
 2. Kopiere die TM4K-spezifischen Quelldateien und Shader-Header in das Vulkan-Verzeichnis:
    ```powershell
-   Copy-Item -Path "C:\Users\box3\Desktop\Twisted Metal - Gesamtdossier\03_QUELLCODE\overlay\rpcs3\Emu\RSX\VK\*" `
+   Copy-Item -Path "C:\path\to\mod-repository\03_QUELLCODE\overlay\rpcs3\Emu\RSX\VK\*" `
              -Destination "rpcs3\Emu\RSX\VK\" -Force
    ```
 3. **Architektur-Highlights der TM4K-Pipeline:**
    - **`VKPresent.cpp` (Gehärtete, deckungsgleiche Präsentation):**
      - `tm4k_crop_inset = true` ist einheitlich aktiv, damit 3D-Spielszene und 2D-Overlay exakt dieselbe Streckung `(39*scale, 24*scale)` bis `(1241*scale, 696*scale)` auf volle 3840x2160 nutzen. Dies verhindert jeglichen Versatz und eliminiert Bildverdopplungen bei Schriften und Ladeanzeigen.
      - **Kein Adress-Gating:** Beide Framebuffer (`0xc0556000` für 3D-Geometrie und `0xc0010000` für 2D-Overlay/HUD) laufen durch `if (packet)`. Der Merge-Shader blendet die UI-Schicht nahtlos auf die 4K-HDR-Szene ein (`mix(fused, screen.rgb, overlay)`). Dadurch flackern weder das Feuer auf Sweet Tooths Kopf noch die Schriften.
-     - **30-Frame 4K-Latch (~500 ms):** Fängt GPU-Lastspitzen, Explosionen und Framedrops zuverlässig ab (`s_fused_latch_frames < 30`). RPCS3 fällt dadurch niemals auf un-tonemappte FP16-Rohpuffer zurück – das weiße Aufblitzen im Match ist zu 100% beseitigt.
+     - **30-Frame 4K-Latch (~500 ms):** Fängt GPU-Lastspitzen, Explosionen und Framedrops zuverlässig ab (`s_fused_latch_frames < 30`). RPCS3 fällt dadurch niemals auf un-tonemappte FP16-Rohpuffer zurück – das weiße Aufblitzen im Match ist als Ziel reduziert; im Spiel zu prüfen.
      - `TM4K_COHORT_WINDOW = 4000`, `max_intra_gap = 2500` für stabile Kohortenbildung.
    - **`TM4KNativeColour.hpp`:** Farbrekonstruktions-Compute-Shader mit `d_clamp = 0.45` für ruhige, rauscharme Wüsten- und Felsenflächen.
    - **`TM4KParticles.hpp`:** Isoliert Partikelpässe (Sweet Tooth Flammen, Mündungsfeuer).
@@ -86,8 +84,8 @@ Definiere die Pfade zu Quellen, Build, Qt und LLVM. Setze zwingend `-DLLVM_USE_I
 ```powershell
 $src   = "C:\tm4k\rpcs3"
 $build = "C:\tm4k\build"
-$Qt    = "C:\Users\box3\Documents\ChatGPT\ps3\rpcs3-build-tools\Qt\6.11.2\msvc2022_64"
-$LLVM  = "C:\Users\box3\Documents\ChatGPT\ps3\rpcs3-build-tools\llvm"
+$Qt    = "C:\SDK\Qt\6.11.2\msvc2022_64"
+$LLVM  = "C:\SDK\llvm"
 
 cmake -S "$src" -B "$build" -G "Visual Studio 18 2026" -A x64 `
   -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded `
@@ -128,7 +126,7 @@ Copy-Item "$build\bin\rpcs3.exe" "$bin\"
 ### Schritt 4.4: TM4K-Aktivierungsflags kopieren
 Kopiere die fünf Aktivierungsflags aus `03_QUELLCODE/flags/` direkt neben die `rpcs3.exe`:
 ```powershell
-Copy-Item "C:\Users\box3\Desktop\Twisted Metal - Gesamtdossier\03_QUELLCODE\flags\*.flag" "$bin\" -Force
+Copy-Item "C:\path\to\mod-repository\03_QUELLCODE\flags\*.flag" "$bin\" -Force
 ```
 *Ohne diese Flags bleibt die 4K-Fusion inaktiv und das Bild fällt auf 720p zurück!*
 
@@ -175,7 +173,7 @@ Video:
     Asynchronous Texture Streaming: false
     Asynchronous Queue Scheduler: Safe
     Use Re-BAR for GPU uploads: true
-(Hinweis: "Adapter: `"`"`" aktiviert die automatische GPU-Erkennung und wählt universal auf NVIDIA RTX, AMD Radeon und Intel Arc die primäre Hochleistungs-Grafikkarte!)
+(Hinweis: "Adapter: `"`"`" aktiviert die automatische GPU-Erkennung und vermeidet einen fest eingetragenen GPU-Namen; gewählte GPU im Log prüfen!)
 Audio:
   Renderer: Cubeb
   Audio Format: Stereo

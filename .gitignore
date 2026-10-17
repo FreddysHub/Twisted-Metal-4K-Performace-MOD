@@ -19,3 +19,34 @@ Thumbs.db
 Desktop.ini
 *.tmp
 *.log
+
+# Private dossier inventories and machine-specific development metadata.
+# These are retained in the original desktop dossier, not the public tree.
+04_RELEASE_SNAPSHOTS/
+05_PRUEFSUMMEN/
+06_ZUSATZBELEGE/
+!06_ZUSATZBELEGE/hardware.json
+03_QUELLCODE/local-build-reference/
+03_QUELLCODE/configs/input_configs/
+03_QUELLCODE/configs/GuiConfigs/
+03_QUELLCODE/patches/
+03_QUELLCODE/git-status.txt
+UEBERGABE_AN_CODEX_GITHUB_YOUTUBE.md
+CAPTURE_VERZEICHNIS.md
+CHECKPOINT_VERZEICHNIS.md
+SAMMLUNGSERGEBNIS.md
+*.mp4
+*.pup
+*.PUP
+*.bin
+*.BIN
+*.elf
+*.self
+*.edat
+*.rap
+*.pem
+*.key
+.env*
+dev_hdd0/
+dev_flash/
+cache/

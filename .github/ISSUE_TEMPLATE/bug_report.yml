@@ -1,0 +1,28 @@
+name: Graphics or performance issue
+description: Report a reproducible problem with a specific build and scene.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "Do not attach game files, firmware, saves, credentials or full GPU captures."
+  - type: textarea
+    id: environment
+    attributes:
+      label: Build and hardware
+      description: Mod commit, RPCS3 base, game serial/update, CPU, GPU, driver and OS.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      description: Level, vehicle, position/camera, first or repeated start, exact steps.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and observed result
+      description: A small screenshot or redacted log excerpt may help.
+    validations:
+      required: true

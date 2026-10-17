@@ -1,5 +1,8 @@
 # Neubau von Grund auf – reproduzierbare Reihenfolge und Freigabe
 
+> [!NOTE]
+> Historisches Entwicklungsdokument. Pauschale Erfolgs-/Hardware-/Sicherheitsbehauptungen sind keine Abnahme. Aktueller Stand: [Build](BUILD.md), [Testnachweise](docs/REPRODUCTION.md), [Veröffentlichungsprüfung](docs/PUBLICATION_AUDIT.de.md). Lokale Archivpfade sind keine öffentlichen Downloads.
+
 Diese Anleitung bereitet den vom Nutzer geplanten sauberen Neubau vor. Sie
 behauptet NICHT, dass ein zweiter Clean-Build heute bereits gelaufen ist.
 Gemini ergänzt zuerst die konkrete finale Releasezuordnung im Ergänzungsblatt.

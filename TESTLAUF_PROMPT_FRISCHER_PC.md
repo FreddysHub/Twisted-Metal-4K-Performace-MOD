@@ -1,5 +1,7 @@
 # Strenger KI-Testlauf-Prompt (Isolierter "Neuer PC"-Modus)
 
+> Prüfauftrag, kein Nachweis eines schon bestandenen Neu-PC-Tests. Aktuelle Anleitung: [BUILD.md](BUILD.md); eigene Controllerzuweisung statt mitgelieferter persönlicher Profile.
+
 > **Verwendungszweck:**  
 > Kopiere den gesamten Inhalt dieses Dokuments (ab dem Trennbalken) und füge ihn in deinen **neuen Chat** ein.  
 > Dieser Prompt erzwingt eine strikte „Air-Gap“-Sperre gegen alle vorhandenen Fertig-Installationen auf deinem Rechner. Die KI muss sich so verhalten, als säße sie an einem **völlig neuen, frisch aufgesetzten PC**, der ausschließlich die für GitHub vorgesehenen Dateien zur Verfügung hat.
@@ -31,7 +33,7 @@ FÜR DICH GILT EINE ABSOLUTE SPERRE:
       - `overlay/rpcs3/Emu/RSX/VK/*` (alle Header und Shader-Dateien)
       - `flags/*.flag` (die 5 Aktivierungsflags)
       - `apply_times_ngp_delta.py` UND `times_ngp_deltas.json`
-      - `configs/*` (vollständige RPCS3-Konfigurationen inkl. Gamepad/XInput-Mapping)
+      - `configs/*` (Game-/Patch-Konfiguration; eigenes Gamepad über Pads zuweisen)
    b) Das saubere, unmodifizierte PS3-Disc-Verzeichnis (`PS3_GAME/USRDIR/`) bzw. ISO.
    c) Das offizielle Sony-Update BCUS98106 v01.06 und die offizielle Firmware `dev_flash`.
    d) Offizielles RPCS3-Git-Repository und Standard-Build-Werkzeuge (MSVC, CMake, Qt, Vulkan SDK, LLVM, Python 3).

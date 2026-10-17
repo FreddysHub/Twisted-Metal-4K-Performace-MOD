@@ -1,5 +1,8 @@
 # Twisted Metal (2012) – 4K Remaster Chronik & Technische Dokumentation
 
+> [!NOTE]
+> Historisches Entwicklungsdokument. Pauschale Erfolgs-/Hardware-/Sicherheitsbehauptungen sind keine Abnahme. Aktueller Stand: [Build](BUILD.md), [Testnachweise](docs/REPRODUCTION.md), [Veröffentlichungsprüfung](docs/PUBLICATION_AUDIT.de.md). Lokale Archivpfade sind keine öffentlichen Downloads.
+
 **Projekt:** Twisted Metal (PS3, BCUS98106 v01.06) – Native 4K-Rekonstruktion, flüssige 60 FPS, Stabilität & Sichtweiten-Remaster auf RPCS3  
 **Datum:** 17. Oktober 2026  
 **Autoren & Mitwirkende:**  

@@ -1,5 +1,8 @@
 # Community-Konzept: Twisted Metal (2012) Multiplayer-Wiederbelebung via P2P Listen-Server
 
+> [!NOTE]
+> Historisches Entwicklungsdokument. Pauschale Erfolgs-/Hardware-/Sicherheitsbehauptungen sind keine Abnahme. Aktueller Stand: [Build](BUILD.md), [Testnachweise](docs/REPRODUCTION.md), [Veröffentlichungsprüfung](docs/PUBLICATION_AUDIT.de.md). Lokale Archivpfade sind keine öffentlichen Downloads.
+
 **Status:** Architekturvorschlag & Aufruf an die RPCS3- / Reverse-Engineering-Community  
 **Bezug:** *Twisted Metal (PS3, 2012)* BCUS98106  
 **Ziel:** Dauerhafte, serverlose Online-Spielbarkeit über RPCS3 / RPCN  

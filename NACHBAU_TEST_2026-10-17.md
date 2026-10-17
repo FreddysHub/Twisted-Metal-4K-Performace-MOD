@@ -1,5 +1,8 @@
 # Tatsächlicher Nachbau-Test & Fehleranalyse – 17. Oktober 2026
 
+> [!NOTE]
+> Historisches Entwicklungsdokument. Pauschale Erfolgs-/Hardware-/Sicherheitsbehauptungen sind keine Abnahme. Aktueller Stand: [Build](BUILD.md), [Testnachweise](docs/REPRODUCTION.md), [Veröffentlichungsprüfung](docs/PUBLICATION_AUDIT.de.md). Lokale Archivpfade sind keine öffentlichen Downloads.
+
 ## 1. Übersicht & Status
 
 Ein neuer RPCS3-Build wurde unabhängig kompiliert und im Zielverzeichnis installiert:

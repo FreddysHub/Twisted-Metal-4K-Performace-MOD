@@ -1,5 +1,8 @@
 # Gemini – Verbindliche Ergänzungen und technischer Finalstand
 
+> [!NOTE]
+> Historisches Entwicklungsdokument. Pauschale Erfolgs-/Hardware-/Sicherheitsbehauptungen sind keine Abnahme. Aktueller Stand: [Build](BUILD.md), [Testnachweise](docs/REPRODUCTION.md), [Veröffentlichungsprüfung](docs/PUBLICATION_AUDIT.de.md). Lokale Archivpfade sind keine öffentlichen Downloads.
+
 **Datum:** 16. Oktober 2026  
 **Projekt:** Twisted Metal (2012) – RPCS3 4K Native Master & Rebuild  
 **Autor:** Antigravity (Gemini 3.1 Flash) in Kooperation mit Nutzer & ChatGPT (Codex 5.6 / 6 / 6.1)

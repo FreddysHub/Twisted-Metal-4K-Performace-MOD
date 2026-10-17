@@ -1,5 +1,8 @@
 # Belegstatus, historische Fehler und noch zu klärende Stellen
 
+> [!NOTE]
+> Historisches Entwicklungsdokument. Pauschale Erfolgs-/Hardware-/Sicherheitsbehauptungen sind keine Abnahme. Aktueller Stand: [Build](BUILD.md), [Testnachweise](docs/REPRODUCTION.md), [Veröffentlichungsprüfung](docs/PUBLICATION_AUDIT.de.md). Lokale Archivpfade sind keine öffentlichen Downloads.
+
 Dieses Blatt verhindert, dass das Sammelarchiv widersprüchliche Zwischenstände
 unbemerkt in eine „perfekte“ Bauanleitung verwandelt. Es ist kein neuer Fixauftrag
 und verändert die heute vom Nutzer für fertig erklärte Spielfassung nicht.

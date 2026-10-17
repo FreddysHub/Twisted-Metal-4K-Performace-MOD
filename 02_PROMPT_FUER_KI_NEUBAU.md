@@ -1,5 +1,7 @@
 # Master-Prompt: Vollständiger KI-Neubau des Twisted Metal 4K Remasters
 
+> Aktuelle öffentliche Bauanleitung und Grenzen: [BUILD.md](BUILD.md), [Teststatus](docs/REPRODUCTION.md). Ein Agent muss alle Voraussetzungen selbst prüfen; die Anleitung ist keine Neu-PC-Erfolgsgarantie.
+
 > **Hinweis zur Verwendung:**  
 > Dieser Prompt ist so formuliert, dass er direkt an eine KI (z. B. Gemini, ChatGPT/Codex oder Claude) in einem **frischen Chat** übergeben werden kann. Er enthält alle Erkenntnisse aus den erfolgreichen Builds vom 16. und 17. Oktober 2026 und ermöglicht den vollständigen Neubau von Grund auf, ohne auf bestehende Fertig-Builds zurückgreifen zu müssen.
 
@@ -36,10 +38,10 @@ Bevor du beginnst, stelle sicher, dass folgende Pfade und Werkzeuge definiert si
 | LLVM | Statische RPCS3-LLVM-Bibliotheken (`/MT`), z. B. aus custom-build-win-22.1.8 |
 | Python | Python 3.10+ (Standardbibliothek genügt für den Asset-Patcher) |
 
-Sicherheitshinweis für Windows:
-Da die erzeugte rpcs3.exe lokal kompiliert wird (unsigniert), kann Windows Smart App Control oder der Defender SmartScreen die Ausführung blockieren. Deaktiviere nicht die globale Systemsicherheit. Falls nötig, richte eine gezielte Defender-Ausschlussregel für das Build-Verzeichnis ein:
-Add-MpPreference -ExclusionPath "<RPCS3-Build-Directory>" (erfordert Administratorrechte)
-Falls keine Adminrechte vorliegen, starte PowerShell mit ExecutionPolicy RemoteSigned auf Prozessebene.
+Windows-Sicherheit:
+Keine globalen Sicherheitsfunktionen abschalten oder Defender-Ausnahmen automatisieren.
+ExecutionPolicy ist keine Lösung für Smart App Control. Bei blockierter EXE den
+konkreten Grund klären und die sicherheitsrelevante Entscheidung dem Nutzer lassen.
 
 ================================================================================
 PHASE 1: RPCS3 REPOSITORY CHECKOUT & SUBMODULES (PFADLÄNGEN-SCHUTZ)
@@ -71,7 +73,7 @@ Wende die im Dossier unter "03_QUELLCODE" gesicherten Modifikationen an:
 4. Stelle sicher, dass in "VKPresent.cpp" die gehärtete Präsentationslogik aktiv ist:
    - tm4k_crop_inset = true (KRITISCH: muss einheitlich aktiv sein, damit 3D-Spielszene und 2D-HUD/Ladeanzeigen 
      exakt dieselbe Skalierung (117,72)..(3723,2088) nutzen und es zu KEINERLEI Bildverdopplung oder Versatz kommt!)
-   - Kein Gating auf Framebuffer-Adressen (NIEMALS auf 0xc0556000 einschränken!):
+   - Referenz-Präsentationspfad: kein Gating auf Framebuffer-Adressen (nicht auf 0xc0556000 einschränken!):
      - Twisted Metal wechselt zwischen 0xc0556000 (3D-Szene) und 0xc0010000 (2D-Overlay/HUD/Menü).
      - Der Fusions-Shader blendet das 2D-Overlay (screen.rgb) auf die 4K-HDR-Szene (fused) ein:
        mix(fused, screen.rgb, overlay).
@@ -80,7 +82,7 @@ Wende die im Dossier unter "03_QUELLCODE" gesicherten Modifikationen an:
    - 30-Frame-Latch (~500 ms):
      - else if (s_last_fused_image && s_fused_latch_frames < 30)
      - Hält bei GPU-Spitzen, Explosionen und Framedrops das letzte gültige 4K-Bild stabil und verhindert, 
-       dass jemals auf un-tonemappte FP16-Rohpuffer zurückgefallen wird -> ELIMINIERT WEISSE FLASH-FRAMES KOMPLETT!
+       dass jemals auf un-tonemappte FP16-Rohpuffer zurückgefallen wird -> soll Rohpuffer-Fallbacks vermeiden; Verhalten live prüfen.
    - TM4K_COHORT_WINDOW = 4000
    - max_intra_gap = 2500
    - Sicherheitsrand-Crop: Quellregion (39*scale, 24*scale) bis (1241*scale, 696*scale) auf volle 3840x2160 gestreckt.
@@ -167,7 +169,7 @@ Video:
     Asynchronous Texture Streaming: false
     Asynchronous Queue Scheduler: Safe
     Use Re-BAR for GPU uploads: true
-(Hinweis: "Adapter: `"`"`" aktiviert die automatische Erkennung der primären dedizierten GPU – funktioniert universal auf NVIDIA GeForce RTX, AMD Radeon RX und Intel Arc!)
+(Hinweis: "Adapter: `"`"`" aktiviert die automatische Erkennung der primären dedizierten GPU – ist kein Hardware-Kompatibilitätsnachweis; das tatsächlich gewählte Gerät prüfen!)
 Audio:
   Renderer: Cubeb
   Audio Format: Stereo

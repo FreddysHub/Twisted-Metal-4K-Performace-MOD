@@ -1,5 +1,8 @@
 # Twisted Metal: aktualisierte Projektchronik und technische Errungenschaften
 
+> [!NOTE]
+> Historisches Entwicklungsdokument. Pauschale Erfolgs-/Hardware-/Sicherheitsbehauptungen sind keine Abnahme. Aktueller Stand: [Build](BUILD.md), [Testnachweise](docs/REPRODUCTION.md), [Veröffentlichungsprüfung](docs/PUBLICATION_AUDIT.de.md). Lokale Archivpfade sind keine öffentlichen Downloads.
+
 Stand16.Oktober2026. Quellen: erhaltenes Septemberdossier, zentrale Checkpoints,
 Originalanalysen, Patches, aktuelle Arbeitsquellen, Launcher und neuere
 Gemini-Checkpoints. Die Hinweise auf spätere Gemini-Arbeit sind übernommen,

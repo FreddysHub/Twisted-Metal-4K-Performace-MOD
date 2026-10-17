@@ -109,6 +109,8 @@ def repack(arc: Psarc, member_index: int, replacement: bytes) -> bytes:
 
 def patch_archive(clean_path: Path, target_path: Path, delta: dict, expected_hash: str) -> str:
     print(f"\n[PSARC] Patching: {clean_path} -> {target_path}")
+    if target_path.exists():
+        raise FileExistsError(f"Refusing to overwrite an existing output: {target_path}")
     arc = Psarc(clean_path)
     idx = arc.names().index('times.ngp')
     b = bytearray(arc.read_entry(arc.entries[idx]))
@@ -118,12 +120,13 @@ def patch_archive(clean_path: Path, target_path: Path, delta: dict, expected_has
         b[pos:pos+4] = bytes.fromhex(hx)
         
     repacked = repack(arc, idx, bytes(b))
-    target_path.parent.mkdir(parents=True, exist_ok=True)
-    target_path.write_bytes(repacked)
-    
     actual_hash = hashlib.sha256(repacked).hexdigest().upper()
     print(f"  SHA256: {actual_hash}")
-    assert actual_hash == expected_hash, f"Hash-Mismatch! Erwartet {expected_hash}, erhalten {actual_hash}"
+    if actual_hash != expected_hash:
+        raise ValueError(f"Hash-Mismatch! Erwartet {expected_hash}, erhalten {actual_hash}")
+    target_path.parent.mkdir(parents=True, exist_ok=True)
+    with target_path.open('xb') as output:
+        output.write(repacked)
     print(f"  Verifikation: PASS (100% Bit-Exakt!)")
     return actual_hash
 
@@ -131,15 +134,17 @@ def patch_ltn(clean_path: Path, target_path: Path) -> None:
     print(f"\n[LTN] Patching: {clean_path} -> {target_path}")
     old = clean_path.read_bytes()
     new, count = re.subn(rb'(?m)^1([ \t]+// Distance Blur Enable)', rb'0\1', old)
-    assert count == 1, f"Distance Blur Enable in {clean_path.name} nicht gefunden!"
+    if count != 1:
+        raise ValueError(f"Distance Blur Enable in {clean_path.name} nicht eindeutig gefunden!")
     target_path.parent.mkdir(parents=True, exist_ok=True)
-    target_path.write_bytes(new + b'\n')
+    with target_path.open('xb') as output:
+        output.write(new)
     print(f"  Distance Blur von 1 auf 0 umgestellt (PASS)")
 
 def main():
     parser = argparse.ArgumentParser(description="Wendet 5000m Sichtweite- und Distance-Blur-Fixes auf Twisted Metal PSARCs und LTNs an.")
-    parser.add_argument("--disc-dir", type=Path, default=None, help="Pfad zum USRDIR-Verzeichnis der sauberen Disc/ISO")
-    parser.add_argument("--target-dir", type=Path, default=None, help="Pfad zum Ziel-USRDIR der RPCS3-Installation (dev_hdd0/game/BCUS98106/USRDIR)")
+    parser.add_argument("--disc-dir", type=Path, required=True, help="Pfad zum USRDIR-Verzeichnis der sauberen Disc/ISO")
+    parser.add_argument("--target-dir", type=Path, required=True, help="NEUES Staging-Ziel; vorhandene Ausgaben werden nicht überschrieben")
     args = parser.parse_args()
 
     script_dir = Path(__file__).resolve().parent
@@ -148,10 +153,29 @@ def main():
         raise FileNotFoundError(f"Delta-Definitionsdatei nicht gefunden: {delta_file}")
     deltas = json.loads(delta_file.read_text(encoding='utf-8'))
 
-    # Automatische Pfadermittlung falls keine CLI-Argumente übergeben wurden
-    root_ws = Path(r'C:\Users\box3\Documents\ChatGPT\ps3')
-    disc_base = args.disc_dir or (root_ws / 'ps3recomp-experiment/twistedmetal/disc/PS3_GAME/USRDIR')
-    target_base = args.target_dir or (root_ws / 'rpcs3-live-4k/build-msvc2026/bin-twisted-metal-4k-anleitungs-nachbau/dev_hdd0/game/BCUS98106/USRDIR')
+    disc_base = args.disc_dir.resolve(strict=True)
+    target_base = args.target_dir.resolve()
+    if disc_base == target_base or disc_base in target_base.parents:
+        raise ValueError("Target must not be inside the clean source directory.")
+    required = {
+        'levels/times.psarc': 'AD4A3C6E7501AA2BEA6258210F09B78A09EABB981DE3D748885D84546380CD71',
+        'mplevels/times.psarc': '0CF5348D405E295E9D1514F2355A248999E5F7EFA1BFBD0FC35D49936C1DFA1C',
+        'levels/times.ltn': None,
+        'levels/suburbs.ltn': None,
+    }
+    for relative, expected in required.items():
+        source = disc_base / relative
+        destination = (target_base / relative).resolve()
+        if target_base not in destination.parents or disc_base in destination.parents:
+            raise ValueError(f"Unsafe output path: {destination}")
+        if not source.is_file():
+            raise FileNotFoundError(source)
+        if destination.exists():
+            raise FileExistsError(f"Existing output: {destination}; choose a new staging directory")
+        if expected and hashlib.sha256(source.read_bytes()).hexdigest().upper() != expected:
+            raise ValueError(f"Clean input SHA256 mismatch: {relative}")
+        if relative.endswith('.ltn') and len(re.findall(rb'(?m)^1[ \t]+// Distance Blur Enable', source.read_bytes())) != 1:
+            raise ValueError(f"Unrecognized clean LTN: {relative}")
 
     print("=" * 65)
     print("TWISTED METAL (2012) - AUTARKER 4K ASSET-PATCHER")
