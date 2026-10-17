@@ -89,6 +89,22 @@ Der Windows-Grafikkartentreiber wird **nicht verändert**. Modifiziert wird
 RPCS3s Vulkan-Renderer. Windows Auto HDR ist getrennt davon. Keine globalen
 Sicherheitsfunktionen für den Nachbau abschalten.
 
+## Bekannter Fehler — Metro Square
+
+In **Metro Square**, bei der **Ausfahrt von der Eisbahn zurück auf die Straße**,
+können beim **Blick nach links** die Brücke und Teile der Umgebungstexturen
+in dieser Ecke verschwinden. Das wurde vom Projektbetreiber beobachtet und
+muss noch untersucht werden; die genaue Ursache ist nicht bestätigt.
+
+**Wichtig für weitere Fixes:** Die guten Ferndetails der **leuchtenden Bäume
+mit roten Blättern** müssen erhalten bleiben — auch bei den weit entfernten
+Bäumen außerhalb des befahrbaren Kartenbereichs. Frühere Lösungsversuche
+führten dort wieder zu matschigen, niedrig aufgelösten Darstellungen;
+teilweise wurden auch andere Objekte unschärfer. Wenn die Brücke wieder
+erscheint, dafür aber diese Details verloren gehen, ist der Fehler noch nicht
+vollständig behoben. Bei Tests deshalb sowohl die betroffene Ecke als auch
+den weit entfernten Hintergrund vergleichen.
+
 ## Dokumentation & Geschichte
 
 - [Technik: PostFX, Farben, LOD und Pixelzahlen](docs/TECHNICAL_NOTES.md)

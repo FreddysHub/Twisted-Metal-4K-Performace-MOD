@@ -112,6 +112,20 @@ Later Test 4 notes report menu startup and user gameplay, including initial visu
 
 Please report build, CPU/GPU/driver, scene and cache state. Do not upload game data, saves, credentials or multi-gigabyte captures to an issue. [Contribution guide](CONTRIBUTING.md).
 
+## Known issue — Metro Square
+
+The maintainer reports a remaining visibility issue near the **ice rink exit**:
+after returning from the rink to the street, **looking left** can make the
+bridge and parts of the surrounding world textures disappear in that corner.
+This area still needs investigation; the underlying cause is not confirmed.
+
+**Important when testing a fix:** preserve the distant detail of the
+**glowing, red-leaved trees**, including those beyond the drivable map boundary.
+Earlier attempts to resolve the missing-world issue made those distant trees
+and some other objects fall back to blurry, low-detail visuals. Restoring the
+bridge at the cost of those details is a regression, not a complete fix.
+Check both the affected corner and the far background when comparing changes.
+
 ## Documentation
 
 | Start here | Reference |
