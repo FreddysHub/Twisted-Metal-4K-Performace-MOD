@@ -167,3 +167,23 @@ flowchart TD
 - **`04_RELEASE_SNAPSHOTS/`**: Prüfsummeninventare und Referenz-Hashes (`candidate-hashes.json`).
 - **`05_PRUEFSUMMEN/`**: SHA256-Prüfsummen aller im Projekt verwendeten Binär- und Quelldateien.
 - **`06_ZUSATZBELEGE/`**: Referenz-Hardwareprofile und Windows AutoHDR-Konfigurationen.
+
+---
+
+## 🎬 Gameplay-Video & Live-Beweis
+* **YouTube Video:** [Hier klicken für das offizielle Gameplay-Video](https://youtube.com) *(Link wird nach Upload eingefügt)*
+* *Hinweis zur Aufnahme:* Das Gameplay wurde authentisch direkt mit dem iPhone vom Monitor abgefilmt. Kein geschöntes Emulator-Capturing, sondern der echte, unzensierte Beweis für 100 % Stabilität, Bildbrillanz und flüssige Reaktionszeiten im laufenden Spielbetrieb!
+
+---
+
+## ☕ Support & Spenden: KI-Credits für die Zukunft des Moddings
+
+> [!TIP]
+> **Warum dieses Projekt deine Unterstützung verdient:**  
+> Dieses Remaster hat bewiesen, was möglich ist, wenn menschliche Ausdauer auf modernste KI-Agenten trifft. Doch das Lösen komplexer Shader-Pipelines und C++ Kernel-Debugs mit Next-Gen-Modellen erfordert tausende Rechen-Credits, die komplett privat finanziert wurden.
+>
+> **Unsere nächsten Ziele mit deiner Hilfe:**
+> 1. **Twisted Metal weiter ausbauen:** Native 1080p/1440p Profile für Handhelds finalisieren und erste experimentelle Schritte in Richtung eines echten **PC-Ports** wagen!
+> 2. **Weitere PS3-Klassiker wiederbeleben:** Es gibt dutzende legendäre PlayStation 3 Spiele, die bis heute unter Rucklern, Frame-Drops und fehlerhaften Effekten leiden. Mit den KI-Agenten wollen wir weitere Problemfälle knacken, optimieren und in strahlendem 4K bei 60 FPS spielbar machen.
+>
+> 💖 **Spendenlink (PayPal):** `[Hier deinen PayPal.me-Link einfügen]`
