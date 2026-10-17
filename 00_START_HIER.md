@@ -178,12 +178,15 @@ flowchart TD
 
 ## ☕ Support & Spenden: KI-Credits für die Zukunft des Moddings
 
-> [!TIP]
-> **Warum dieses Projekt deine Unterstützung verdient:**  
-> Dieses Remaster hat bewiesen, was möglich ist, wenn menschliche Ausdauer auf modernste KI-Agenten trifft. Doch das Lösen komplexer Shader-Pipelines und C++ Kernel-Debugs mit Next-Gen-Modellen erfordert tausende Rechen-Credits, die komplett privat finanziert wurden.
->
-> **Unsere nächsten Ziele mit deiner Hilfe:**
-> 1. **Twisted Metal weiter ausbauen:** Native 1080p/1440p Profile für Handhelds finalisieren und erste experimentelle Schritte in Richtung eines echten **PC-Ports** wagen!
-> 2. **Weitere PS3-Klassiker wiederbeleben:** Es gibt dutzende legendäre PlayStation 3 Spiele, die bis heute unter Rucklern, Frame-Drops und fehlerhaften Effekten leiden. Mit den KI-Agenten wollen wir weitere Problemfälle knacken, optimieren und in strahlendem 4K bei 60 FPS spielbar machen.
->
-> 💖 **Spendenlink (PayPal):** `[Hier deinen PayPal.me-Link einfügen]`
+> [!IMPORTANT]
+> ### ❤️ Support My Twisted Metal Modding Project
+> 
+> I've recently started modding **Twisted Metal**, a game I'm a huge fan of, and I'm really enjoying the process! I'd love to keep improving the game, explore a potential **PC port**, and work on more **PlayStation 3 games** in the future.
+> 
+> However, the AI models I use for development cost money, and more powerful models are even more expensive.
+> 
+> If you'd like to help me access better AI models and continue working on these projects, you can support me with a small, completely voluntary donation:
+> 
+> 👉 **PayPal:** [https://www.paypal.me/FedorTempel](https://www.paypal.me/FedorTempel)
+> 
+> *Every bit of support is greatly appreciated! Thank you! 🎮*
