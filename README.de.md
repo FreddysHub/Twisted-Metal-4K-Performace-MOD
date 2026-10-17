@@ -37,7 +37,13 @@ oder als Spieldownload verlinkt.
 
 Vorhandene RenderDoc-Replay-Exporte in 1920 × 1080. Keine neuen Screenshots des letzten Nachbaus und kein FPS-Nachweis. [Bildherkunft](docs/assets/README.md).
 
-🎬 **[YouTube-Kanal von FreddysHub](https://www.youtube.com/channel/UCuaFl468uckb1ayU8lqgaQQ)** — konkreter veröffentlichter Trailer-Link noch nicht verifiziert.
+## Gameplay-Video
+
+[![Twisted Metal 4K – Video von FreddysHub auf YouTube ansehen](https://img.youtube.com/vi/8QHzOk1Sldg/hqdefault.jpg)](https://www.youtube.com/watch?v=8QHzOk1Sldg)
+
+**[▶ Video direkt auf YouTube ansehen](https://www.youtube.com/watch?v=8QHzOk1Sldg)**
+— ein Klick auf das Vorschaubild öffnet das Video. Von FreddysHub am 18. Oktober 2026 geteilt.
+Die Aufnahme zeigt einen Testlauf, keine garantierte Leistung auf jedem PC.
 
 ## So baust du es nach
 

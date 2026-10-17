@@ -54,7 +54,13 @@ game updates, decryption keys or PS3 firmware files.
 
 Existing **development RenderDoc replay exports**, displayed at 1920 × 1080. Not new captures of the latest rebuild, not a before/after comparison, and not proof of frame rate. [Image provenance](docs/assets/README.md).
 
-🎬 **[FreddysHub on YouTube](https://www.youtube.com/channel/UCuaFl468uckb1ayU8lqgaQQ)** — gameplay channel. A specific public trailer URL has not yet been verified.
+## Gameplay video
+
+[![Watch the Twisted Metal 4K video by FreddysHub on YouTube](https://img.youtube.com/vi/8QHzOk1Sldg/hqdefault.jpg)](https://www.youtube.com/watch?v=8QHzOk1Sldg)
+
+**[▶ Watch the video on YouTube](https://www.youtube.com/watch?v=8QHzOk1Sldg)**
+— click the preview to open the video. Shared by FreddysHub on 18 October 2026.
+Gameplay footage illustrates a test session, not guaranteed performance on every PC.
 
 ## Get started
 

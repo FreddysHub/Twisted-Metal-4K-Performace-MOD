@@ -1,6 +1,14 @@
 # YouTube-Trailer – vorbereitete Metadaten
 
-Status: lokale Videodatei vorhanden; kein Upload durch diese Überarbeitung und keine verifizierte Video-URL. Dies ist kein Veröffentlichungsnachweis.
+Status: Der Nutzer hat das Video selbst hochgeladen und am 18. Oktober 2026 den
+öffentlichen Link übergeben. Codex hat diesen Link mit klickbarem Vorschaubild
+in die englische und deutsche GitHub-README eingebaut; kein erneuter Video-Upload.
+
+Video: https://www.youtube.com/watch?v=8QHzOk1Sldg
+Klickbare Vorschau: https://img.youtube.com/vi/8QHzOk1Sldg/hqdefault.jpg
+
+Die folgenden Texte bleiben Metadaten-Vorschläge, keine unabhängig geprüfte
+Abschrift des aktuell auf YouTube verwendeten Titels oder Beschreibungstextes.
 
 ## Titel
 
