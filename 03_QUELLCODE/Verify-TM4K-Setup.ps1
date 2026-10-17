@@ -137,15 +137,13 @@ if (Test-Path $gameCfgFile) {
     $gameCfg = Get-Content $gameCfgFile -Raw
     $scaleMatch = [regex]::Match($gameCfg, "Resolution Scale:\s*(\d+)")
     $currentScale = if ($scaleMatch.Success) { [int]$scaleMatch.Groups[1].Value } else { 0 }
-    $validScale = ($currentScale -in @(150, 200, 300))
+    $validScale = ($currentScale -eq 300)
     $hasAsyncFalse = ($gameCfg -match "Asynchronous Texture Streaming:\s*false")
     $hasMinDim256 = ($gameCfg -match "Minimum Scalable Dimension:\s*256")
     $hasDefaultShader = ($gameCfg -match '(?m)^\s*Shader Mode:\s*Async Recompiler \(multi-threaded\)\s*$')
     
     if ($validScale -and $hasAsyncFalse -and $hasMinDim256 -and $hasDefaultShader) {
         $scaleDesc = switch ($currentScale) {
-            150 { "150% 1080p FHD (Performance-Modus)" }
-            200 { "200% 1440p WQHD" }
             300 { "300% 4K UHD (Referenz-Standard / SSAA)" }
             default { "$currentScale% Skalierung" }
         }
@@ -153,7 +151,7 @@ if (Test-Path $gameCfgFile) {
         $passed++
     } else {
         Write-Host " [FAIL]" -ForegroundColor Red
-        if (-not $validScale) { $errors += "Resolution Scale ist $currentScale (Gueltig: 300 fuer 4K, 200 fuer 1440p, 150 fuer 1080p)!" }
+        if (-not $validScale) { $errors += "Resolution Scale ist $currentScale. Diese Fassung unterstuetzt nur 300 fuer internes 4K. 150/1080p und 200/1440p sind wegen Bildschicht-Versatz noch nicht unterstuetzt." }
         if (-not $hasAsyncFalse) { $errors += "Asynchronous Texture Streaming muss FALSE sein (verhindert durchscheinende Straßen)!" }
         if (-not $hasMinDim256) { $errors += "Minimum Scalable Dimension muss 256 sein (schützt 2D-Masken)!" }
         if (-not $hasDefaultShader) { $errors += 'Shader Mode muss fuer den regulaeren Neubau exakt Async Recompiler (multi-threaded) sein. Interpreter-Modi loesen eine zusaetzliche lange Pipeline-Vorberechnung aus; Async with Shader Interpreter ist zudem kein gueltiger YAML-Wert.' }

@@ -158,7 +158,7 @@ Video:
   Write Depth Buffer: false
   Multithreaded RSX: false
   Relaxed ZCULL Sync: false
-  Resolution Scale: 300   # 300 = 4K UHD (Standard & Referenz, empfohlen auch für 1080p/1440p via SSAA Downsampling); 200 = 1440p; 150 = 1080p (Performance)
+  Resolution Scale: 300   # Nur internes 4K unterstuetzt; 1080p/1440p-Profile noch in Planung, derzeit Bildschicht-Versatz.
   Anisotropic Filter Override: 16
   Texture LOD Bias Addend: -0.1
   Minimum Scalable Dimension: 256

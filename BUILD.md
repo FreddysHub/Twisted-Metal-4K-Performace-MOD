@@ -5,6 +5,12 @@ Windows x64, Vulkan, Twisted Metal US BCUS98106 update 01.06. This is not an
 installer and does not download the game, updates, firmware or private caches.
 Preserve your existing installation and saves.
 
+> **Current release: internal 4K only.** Use 1280 × 720 base resolution with
+> 300% scale (3840 × 2160). Maintainer testing reports texture/layer misalignment
+> when changing internal rendering to 1080p or 1440p. Dedicated profiles for those
+> resolutions are planned but not yet supported. Do not lower scale as a drop-in
+> performance preset for the current reconstruction pipeline.
+
 ## 1. Prerequisites
 
 - Your own game dump and installed matching update. Expected PPU:

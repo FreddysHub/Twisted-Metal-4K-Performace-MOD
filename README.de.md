@@ -17,6 +17,13 @@ oder als Spieldownload verlinkt.
 
 [Datenschutzprüfung und Abgrenzung der Spieldateien](docs/PRIVACY.md).
 
+> [!WARNING]
+> **Aktuell nur 4K.** Die interne Auflösung auf **3840 × 2160** lassen
+> (Basis 1280 × 720, **Resolution Scale: 300%**). Beim Umstellen der internen
+> Auflösung auf 1080p oder 1440p wurden in den Nutzertests verschobene Texturen
+> beziehungsweise Bildschichten beobachtet. Angepasste Profile für 1080p und
+> 1440p sind als nächster Schritt geplant, aber in dieser Fassung noch nicht unterstützt.
+
 ## Was wir verändert haben
 
 | Bereich | Umsetzung |
@@ -46,6 +53,20 @@ Vorhandene RenderDoc-Replay-Exporte in 1920 × 1080. Keine neuen Screenshots des
 Die Aufnahme zeigt einen Testlauf, keine garantierte Leistung auf jedem PC.
 
 ## So baust du es nach
+
+### Testsystem / PC-Specs
+
+| Komponente | Testsystem von FreddysHub |
+| --- | --- |
+| CPU | Intel Core i9-11900K |
+| GPU | AMD Radeon RX 7900 XT — 20 GB Grafikspeicher |
+| RAM | 32 GB (2 × 16 GB) DDR4-3600 MHz CL15 |
+| Rendering-Auflösung | 3840 × 2160 (4K UHD; interne Skalierung 300%) |
+
+Vom Projektbetreiber bereitgestellte Angaben. **Keine Mindestanforderungen**
+und keine Garantie für dieselbe Leistung auf anderen PCs.
+
+### Nachbauen und testen
 
 1. US-Version **BCUS98106**, Update **01.06**, PPU-Hash prüfen.
 2. Separaten Emulator bauen: [aktuelle englische Anleitung](BUILD.md) oder [deutsche Anleitung](03_MANUELLE_SCHRITT_FUER_SCHRITT_ANLEITUNG.md). Funktionierende Installation und Spielstände erhalten.
@@ -93,8 +114,9 @@ GPU-Analyse: **RenderDoc**. Keine offizielle Empfehlung dieser Organisationen.
 **[Freiwillig via PayPal unterstützen](https://www.paypal.me/FedorTempel)** ·
 **[YouTube](https://www.youtube.com/channel/UCuaFl468uckb1ayU8lqgaQQ)**
 
-Spenden sind keine Voraussetzung. PC-Port, Online-Wiederbelebung und
-Handheld-Profile sind Ideen, keine zugesagten Leistungen.
+Spenden sind keine Voraussetzung. Profile für 1080p und 1440p sind geplant;
+ein Veröffentlichungstermin steht noch nicht fest. PC-Port, Online-Wiederbelebung
+und Handheld-Profile sind Ideen, keine zugesagten Leistungen.
 
 ---
 

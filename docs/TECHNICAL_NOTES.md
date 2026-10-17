@@ -59,7 +59,13 @@ Do not conflate distance fog, depth of field, motion blur, mipmaps and model LOD
 
 ## Compatibility and limits
 
-Reference hardware: Intel Core i9-11900K, AMD Radeon RX 7900 XT.
+Reference hardware supplied by FreddysHub: Intel Core i9-11900K,
+AMD Radeon RX 7900 XT (20 GB), 32 GB (2 × 16 GB) DDR4-3600 MHz CL15,
+3840 × 2160 output / 300% internal scale. These are test specs, not minimum requirements.
+
+Current configuration supports internal 4K only. The maintainer reports
+misaligned textures/image layers at internal 1080p or 1440p. Dedicated profiles
+are planned; those scales are not supported presets for this release.
 Other vendors, handheld profiles and alternate regions are not established
 by that test. Empty Adapter avoids a hard-coded development GPU name; it
 does not itself certify a universal fastest-device choice.

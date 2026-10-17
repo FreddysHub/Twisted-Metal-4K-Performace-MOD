@@ -30,6 +30,13 @@ game updates, decryption keys or PS3 firmware files.
 
 [Privacy review and the game-file boundary](docs/PRIVACY.md).
 
+> [!WARNING]
+> **4K only for now.** Keep the internal rendering at **3840 × 2160**
+> (1280 × 720 base, **300% Resolution Scale**). Switching the internal setting
+> to 1080p or 1440p currently causes misaligned textures/image layers, as reported
+> in maintainer testing. Dedicated 1080p and 1440p profiles are planned for a
+> future update; they are not supported by this version.
+
 ## Built for the details
 
 | Area | What this project changes |
@@ -63,6 +70,20 @@ Existing **development RenderDoc replay exports**, displayed at 1920 × 1080. No
 Gameplay footage illustrates a test session, not guaranteed performance on every PC.
 
 ## Get started
+
+### Test system / PC specs
+
+| Component | Maintainer's test system |
+| --- | --- |
+| CPU | Intel Core i9-11900K |
+| GPU | AMD Radeon RX 7900 XT — 20 GB VRAM |
+| RAM | 32 GB (2 × 16 GB) DDR4-3600 MHz CL15 |
+| Rendering resolution | 3840 × 2160 (4K UHD; 300% internal scale) |
+
+Specs supplied by FreddysHub. This is the test system, **not minimum requirements**
+or a guarantee of identical performance on another PC.
+
+### Build and test
 
 1. **Check the game:** US `BCUS98106`, update `01.06`, matching PPU hash. Other releases are not validated here.
 2. **Use an isolated build:** follow the [English build guide](BUILD.md). Preserve your working emulator and saves.
@@ -114,7 +135,8 @@ Voluntary support helps fund testing and development:
 
 **[Support via PayPal](https://www.paypal.me/FedorTempel)** · **[YouTube](https://www.youtube.com/channel/UCuaFl468uckb1ayU8lqgaQQ)**
 
-No donation is required. Ports, multiplayer work and handheld profiles are ideas, not promised deliverables.
+No donation is required. 1080p/1440p profiles are planned, with no release date.
+Ports, multiplayer work and handheld profiles remain ideas, not promised deliverables.
 
 ---
 
