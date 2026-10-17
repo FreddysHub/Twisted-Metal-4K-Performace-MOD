@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/tm4k-banner.svg" alt="TM4K — Twisted Metal 4K Performance Mod by FreddysHub" width="100%">
+  <img src="docs/assets/twisted-metal-4k-remastered-fire.png" alt="Twisted Metal 4K — Remastered, a fan-made RPCS3 mod by FreddysHub" width="100%">
 </p>
 
 <p align="center">
@@ -23,6 +23,12 @@
 
 > [!IMPORTANT]
 > **Source/build package, not a ready-to-play game download.** Bring your own legally obtained game, matching update and PS3 firmware. This is an experimental community modification, not an official RPCS3 or Sony release. Performance and compatibility depend on hardware, scene and cache state; 60 FPS is a target, not a guarantee.
+
+**Game not included:** you must own and provide your own matching Twisted Metal
+(PS3) game dump. This repository does not supply or link to game downloads,
+game updates, decryption keys or PS3 firmware files.
+
+[Privacy review and the game-file boundary](docs/PRIVACY.md).
 
 ## Built for the details
 

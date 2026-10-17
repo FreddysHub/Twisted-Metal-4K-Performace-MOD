@@ -15,8 +15,8 @@
 |---|---|
 | **Neuer Rebuild Desktop-Link** | `Twisted Metal 4K (Neuer Nachbau).lnk` |
 | **Referenz Desktop-Link** | `Twisted Metal 4K Echte Dichte (Erweiterte Objektsichtweite).lnk` |
-| **Arbeits- & Ausführungsordner** | `C:\Users\box3\Documents\ChatGPT\ps3\rpcs3-live-4k\build-msvc2026\bin-twisted-metal-4k-neuer-nachbau` (Referenz: `bin-twisted-metal-4k-sichtweite-test`) |
-| **Start-Skript (Launcher)** | `C:\Users\box3\Documents\ChatGPT\ps3\launchers\Start-TwistedMetal-4K-Neuer-Nachbau.ps1` |
+| **Arbeits- & Ausführungsordner** | `C:\tm4k\workspace\rpcs3-live-4k\build-msvc2026\bin-twisted-metal-4k-neuer-nachbau` (Referenz: `bin-twisted-metal-4k-sichtweite-test`) |
+| **Start-Skript (Launcher)** | `C:\tm4k\workspace\launchers\Start-TwistedMetal-4K-Neuer-Nachbau.ps1` |
 | **Tatsächliche EXE** | `rpcs3.exe` |
 | **EXE SHA256** | `E7A48F69F06EC319E1D6A04CE073C71E9C1132F3F0B062EDAEA4951D4751C6D2` (100% bit-identisch) |
 | **RPCS3 Basis-Commit** | `1707d7fc883ef48ff21bdcbb0141a3211ae09cb2` |

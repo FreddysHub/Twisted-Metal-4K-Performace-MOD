@@ -6,7 +6,7 @@
 ## 1. Übersicht & Status
 
 Ein neuer RPCS3-Build wurde unabhängig kompiliert und im Zielverzeichnis installiert:
-`C:\Users\box3\Documents\ChatGPT\ps3\rpcs3-live-4k\build-msvc2026\bin-twisted-metal-4k-anleitungs-nachbau`
+`C:\tm4k\workspace\rpcs3-live-4k\build-msvc2026\bin-twisted-metal-4k-anleitungs-nachbau`
 
 Desktop-Verknüpfung: **Twisted Metal 4K - Anleitungs-Nachbau**  
 Zusätzlich: **Twisted Metal 4K - Anleitungs-Nachbau - RenderDoc**
@@ -68,7 +68,7 @@ Nach dem ersten Bauversuch durch ChatGPT/Codex traten im praktischen Spieltest d
   - Desktop-Verknüpfung: **Twisted Metal 4K - Test-Neubau.lnk**
 - **Launcher-Selbsttest (`-CheckOnly`):** `PASS` (Konfiguration und Umgebung startklar).
 - **Quellcode-Synchronisation:**
-  - `C:\Users\box3\Desktop\Twisted Metal - Gesamtdossier\03_QUELLCODE\overlay\rpcs3\Emu\RSX\VK\VKPresent.cpp`
-  - `C:\Users\box3\Desktop\Twisted Metal - Gesamtdossier\03_QUELLCODE\tracked-changes.patch`
+  - `C:\path\to\mod-repository\03_QUELLCODE\overlay\rpcs3\Emu\RSX\VK\VKPresent.cpp`
+  - `C:\path\to\mod-repository\03_QUELLCODE\tracked-changes.patch`
   - Beide enthalten die flackerfreie Fusionslogik, die 30-Frame-Latch-Härtung und den einheitlichen Zuschnitt.
 - **Bereit für Endanwender-Test:** Über das Desktop-Icon `Twisted Metal 4K - Test-Neubau.lnk` direkt spielbar.

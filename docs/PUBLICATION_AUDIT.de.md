@@ -42,11 +42,10 @@ keine schon veröffentlichten alten Blobs. Die Prüfung sucht deshalb zusätzlic
 nach Token-/Schlüsselmustern. Kein pauschales Versprechen, historische Daten
 seien aus dem Internet gelöscht; kein Force-Push ohne eigene Entscheidung.
 
-GitHub-Browserverbindung und Connector-Anmeldung sind getrennt. Der Browser
-zeigte FreddysHub; der Connector sandby040 hatte nur Leserecht. Git Credential
-Manager enthielt beide Konten. Die Veröffentlichungskopie verwendet explizit
-FreddysHub und nur den Manager statt des blockierenden Helper-Auswahldialogs.
-Keine Zugangsdaten ausgelesen oder in Dateien gespeichert.
+GitHub-Browser, Connector und Git-Zugang können unterschiedliche Konten nutzen.
+Für Veröffentlichungen das beabsichtigte Konto und die Repositoryrechte prüfen.
+Keine Zugangsdaten in Dateien oder Logs speichern. Ein öffentlicher Quellbaum
+gibt Lesern keinen Zugriff auf den lokalen PC.
 
 ## Grenzen und weiteres Vorgehen
 

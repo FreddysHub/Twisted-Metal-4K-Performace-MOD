@@ -25,7 +25,6 @@ Desktop.ini
 04_RELEASE_SNAPSHOTS/
 05_PRUEFSUMMEN/
 06_ZUSATZBELEGE/
-!06_ZUSATZBELEGE/hardware.json
 03_QUELLCODE/local-build-reference/
 03_QUELLCODE/configs/input_configs/
 03_QUELLCODE/configs/GuiConfigs/
@@ -50,3 +49,4 @@ SAMMLUNGSERGEBNIS.md
 dev_hdd0/
 dev_flash/
 cache/
+docs/assets/tm4k-banner.svg

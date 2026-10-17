@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/assets/tm4k-banner.svg" alt="TM4K von FreddysHub" width="100%"></p>
+<p align="center"><img src="docs/assets/twisted-metal-4k-remastered-fire.png" alt="Twisted Metal 4K — Remastered, Fan-Mod von FreddysHub" width="100%"></p>
 
 <p align="center"><b>Ein Fanprojekt für schärfere Spielgrafik, mehr Ferndetails und bessere Performance auf RPCS3.</b></p>
 
@@ -9,6 +9,13 @@
 
 > [!IMPORTANT]
 > **Quellcode und Bauanleitungen, kein fertiges Spiel.** Eigene rechtmäßig bezogene Spieldaten, passendes Update und PS3-Firmware erforderlich. Kein offizieller RPCS3-/Sony-Release. 3840 × 2160 und bis zu 60 FPS sind das Ziel, nicht auf jedem PC und in jeder Szene garantiert.
+
+**Das PS3-Spiel ist nicht enthalten.** Jeder muss Twisted Metal selbst besitzen
+und den passenden eigenen Spieldump bereitstellen. Keine Spieldateien, Updates,
+Entschlüsselungsschlüssel oder PS3-Firmwaredateien werden hier hochgeladen
+oder als Spieldownload verlinkt.
+
+[Datenschutzprüfung und Abgrenzung der Spieldateien](docs/PRIVACY.md).
 
 ## Was wir verändert haben
 

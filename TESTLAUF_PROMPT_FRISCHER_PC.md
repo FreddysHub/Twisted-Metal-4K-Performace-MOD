@@ -58,9 +58,9 @@ SCHRITT 1: ARBEITSVERZEICHNIS & ISOLIERTER RPCS3-CHECKOUT
 SCHRITT 2: QUELLCODE-PATCHING & TM4K-OVERLAY (03_QUELLCODE)
 ================================================================================
 1. Wende den GitHub-Patch an:
-   git apply "C:\Users\box3\Desktop\Twisted Metal - Gesamtdossier\03_QUELLCODE\tracked-changes.patch"
+   git apply "C:\path\to\mod-repository\03_QUELLCODE\tracked-changes.patch"
 2. Kopiere die TM4K-spezifischen Quelldateien und Shader-Header aus dem Dossier in den Vulkan-Quellbaum:
-   Copy-Item "C:\Users\box3\Desktop\Twisted Metal - Gesamtdossier\03_QUELLCODE\overlay\rpcs3\Emu\RSX\VK\*" `
+   Copy-Item "C:\path\to\mod-repository\03_QUELLCODE\overlay\rpcs3\Emu\RSX\VK\*" `
              "C:\tm4k_fresh\rpcs3\rpcs3\Emu\RSX\VK\" -Force
 3. Sicherheitsprüfung der Präsentationslogik in `VKPresent.cpp`:
    - `tm4k_crop_inset = true` muss global aktiv sein (schützt vor 39x24-Versatz und doppelten Schriften).
@@ -81,8 +81,8 @@ SCHRITT 3: CMAKE-KONFIGURATION & COMPILER-LAUF
    Pfade:
    $src   = "C:\tm4k_fresh\rpcs3"
    $build = "C:\tm4k_fresh\build"
-   $Qt    = "C:\Users\box3\Documents\ChatGPT\ps3\rpcs3-build-tools\Qt\6.11.2\msvc2022_64"
-   $LLVM  = "C:\Users\box3\Documents\ChatGPT\ps3\rpcs3-build-tools\llvm"
+   $Qt    = "C:\tm4k\workspace\rpcs3-build-tools\Qt\6.11.2\msvc2022_64"
+   $LLVM  = "C:\tm4k\workspace\rpcs3-build-tools\llvm"
 
    cmake -S "$src" -B "$build" -G "Visual Studio 18 2026" -A x64 `
      -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded `
@@ -116,7 +116,7 @@ SCHRITT 4: ZIELVERZEICHNIS EINRICHTEN (DEPLOYMENT OHNE ALTBESTÄNDE)
    & "$Qt\bin\windeployqt.exe" --release --no-translations "$bin\rpcs3.exe"
 
 3. Kopiere die 5 Aktivierungs-Flags aus dem GitHub-Ordner `03_QUELLCODE/flags/`:
-   Copy-Item "C:\Users\box3\Desktop\Twisted Metal - Gesamtdossier\03_QUELLCODE\flags\*.flag" "$bin\" -Force
+   Copy-Item "C:\path\to\mod-repository\03_QUELLCODE\flags\*.flag" "$bin\" -Force
    (Enthält: tm4k-enable.flag, tm4k-lit-c-enable.flag, tm4k-lit01-enable.flag,
              tm4k-micro-e-enable.flag, tm4k-packed-alpha-enable.flag)
    Hinweis: Ohne diese Flags greift der 4K-Shader nicht und das Bild fällt auf 720p zurück!
@@ -125,11 +125,11 @@ SCHRITT 4: ZIELVERZEICHNIS EINRICHTEN (DEPLOYMENT OHNE ALTBESTÄNDE)
 SCHRITT 5: SPIELSPEZIFISCHE KONFIGURATIONEN
 ================================================================================
 Empfohlener & sicherster Weg: Kopiere die vorbereiteten Konfigurationen direkt aus dem GitHub-Ordner `03_QUELLCODE\configs`:
-Copy-Item "C:\Users\box3\Desktop\Twisted Metal - Gesamtdossier\03_QUELLCODE\configs\custom_configs" "$bin\config\custom_configs" -Recurse -Force
-Copy-Item "C:\Users\box3\Desktop\Twisted Metal - Gesamtdossier\03_QUELLCODE\configs\input_configs" "$bin\config\input_configs" -Recurse -Force
-Copy-Item "C:\Users\box3\Desktop\Twisted Metal - Gesamtdossier\03_QUELLCODE\configs\patch_config.yml" "$bin\config\patch_config.yml" -Force
-Copy-Item "C:\Users\box3\Desktop\Twisted Metal - Gesamtdossier\03_QUELLCODE\configs\GuiConfigs" "$bin\GuiConfigs" -Recurse -Force
-Copy-Item "C:\Users\box3\Desktop\Twisted Metal - Gesamtdossier\03_QUELLCODE\configs\patches" "$bin\patches" -Recurse -Force
+Copy-Item "C:\path\to\mod-repository\03_QUELLCODE\configs\custom_configs" "$bin\config\custom_configs" -Recurse -Force
+Copy-Item "C:\path\to\mod-repository\03_QUELLCODE\configs\input_configs" "$bin\config\input_configs" -Recurse -Force
+Copy-Item "C:\path\to\mod-repository\03_QUELLCODE\configs\patch_config.yml" "$bin\config\patch_config.yml" -Force
+Copy-Item "C:\path\to\mod-repository\03_QUELLCODE\configs\GuiConfigs" "$bin\GuiConfigs" -Recurse -Force
+Copy-Item "C:\path\to\mod-repository\03_QUELLCODE\configs\patches" "$bin\patches" -Recurse -Force
 (KRITISCH: "$bin\patches\BCUS98106_patch.yml" enthält die Definition für "PostFX Sharp Fast"! Fehlt dieser Ordner, wird der PostFX-Bypass nicht angewendet: Sweet Tooths Flammen werden cyan/blau und am unteren Bildrand erscheint ein giftgrüner Streifen!)
 
 (Alternativ, falls du die Dateien von Hand erstellen möchtest, verwende exakt die nachfolgenden Spezifikationen):
@@ -265,7 +265,7 @@ SPU-82b3399c8e6533ba991eedb0e139bf20c7783bac:
 SCHRITT 6: AUTARKER ASSET-PATCHER (5000M WEITSICHT & ANTI-BLUR)
 ================================================================================
 Verwende das autarke Python-Skript und die Delta-Tabelle aus dem GitHub-Ordner:
-python "C:\Users\box3\Desktop\Twisted Metal - Gesamtdossier\03_QUELLCODE\apply_times_ngp_delta.py" `
+python "C:\path\to\mod-repository\03_QUELLCODE\apply_times_ngp_delta.py" `
   --disc-dir "<Pfad-zu-sauberem-Disc-USRDIR>" `
   --target-dir "$bin\dev_hdd0\game\BCUS98106\USRDIR"
 
@@ -277,7 +277,7 @@ SCHRITT 7: LAUNCHER & UMGEBUNGSVARIABLEN
 Erstelle das PowerShell-Startskript "$bin\Start-TwistedMetal-4K.ps1":
 param(
     [switch]$CheckOnly,
-    [string]$GamePath = "C:\Users\box3\Desktop\ps3\Twisted Metal\2\Twisted Metal (USA) (En,Fr,Es).iso"
+    [string]$GamePath = "C:\Users\LOCAL_USER\Desktop\ps3\Twisted Metal\2\Twisted Metal (USA) (En,Fr,Es).iso"
 )
 $binDir = $PSScriptRoot
 $exe    = Join-Path $binDir "rpcs3.exe"
@@ -307,7 +307,7 @@ Start-Process -FilePath $exe -ArgumentList "`"$GamePath`"" -WorkingDirectory $bi
 SCHRITT 8: AUTOMATISIERTE VALIDIERUNG & ERFOLGSNACHWEIS
 ================================================================================
 1. Führe zwingend den automatisierten 8-Punkte-Systemcheck aus:
-   Kopiere "C:\Users\box3\Desktop\Twisted Metal - Gesamtdossier\03_QUELLCODE\Verify-TM4K-Setup.ps1"
+   Kopiere "C:\path\to\mod-repository\03_QUELLCODE\Verify-TM4K-Setup.ps1"
    nach "$bin\Verify-TM4K-Setup.ps1" und führe aus:
    powershell -ExecutionPolicy Bypass -File "$bin\Verify-TM4K-Setup.ps1"
 
