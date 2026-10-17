@@ -23,7 +23,7 @@ Twisted Metal (PS3) – 4K 60FPS Trailer: World First AI-Engineered 4K Remaster 
 
 ```text
 ⬇️ Download Mod & Complete Guide (GitHub):
-👉 https://github.com/[DEIN-GITHUB-NAME]/[DEIN-REPO-NAME]
+👉 https://github.com/FreddysHub/Twisted-Metal-4K-Performace-MOD
 
 ❤️ Support & Donate via PayPal:
 👉 https://www.paypal.me/FedorTempel

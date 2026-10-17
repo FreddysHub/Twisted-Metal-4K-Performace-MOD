@@ -171,7 +171,7 @@ flowchart TD
 ---
 
 ## 🎬 Gameplay-Video & Live-Beweis
-* **YouTube Video:** [Hier klicken für das offizielle Gameplay-Video](https://youtube.com) *(Link wird nach Upload eingefügt)*
+* **YouTube Video:** [Offizieller Gameplay-Trailer auf YouTube (FreddysHub)](https://www.youtube.com/channel/UCuaFl468uckb1ayU8lqgaQQ)
 * *Hinweis zur Aufnahme:* Das Gameplay wurde authentisch direkt mit dem iPhone vom Monitor abgefilmt. Kein geschöntes Emulator-Capturing, sondern der echte, unzensierte Beweis für 100 % Stabilität, Bildbrillanz und flüssige Reaktionszeiten im laufenden Spielbetrieb!
 
 ---

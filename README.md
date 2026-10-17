@@ -7,7 +7,7 @@
 ### ⬇️ Quick Links & Actions
 * ⬇️ **Download & Automated Build:** [02_PROMPT_FUER_KI_NEUBAU.md](02_PROMPT_FUER_KI_NEUBAU.md) *(Master-Prompt for AI Agents)*
 * ❤️ **Support the Project:** [Donate via PayPal](https://www.paypal.me/FedorTempel)
-* 🎬 **Gameplay Trailer:** [Watch on YouTube](https://youtube.com) *(Off-screen iPhone live recording)*
+* 🎬 **Gameplay Trailer:** [Watch on YouTube Channel (FreddysHub)](https://www.youtube.com/channel/UCuaFl468uckb1ayU8lqgaQQ) *(Off-screen iPhone live recording)*
 
 ---
 
@@ -131,7 +131,7 @@ flowchart TD
 ---
 
 ## 🎬 Gameplay Video & Live Proof
-* **YouTube Video:** [Click here for the official Gameplay Video](https://youtube.com)
+* **YouTube Video:** [Official Gameplay Trailer on YouTube (FreddysHub)](https://www.youtube.com/channel/UCuaFl468uckb1ayU8lqgaQQ)
 * *Note on Capture:* The footage was recorded authentically off-screen directly with an iPhone from the monitor. No artificial emulator capture tricks—just genuine, unedited proof of real-time responsiveness, zero input lag, and rock-solid 60 FPS 4K gameplay on physical hardware!
 
 ---
