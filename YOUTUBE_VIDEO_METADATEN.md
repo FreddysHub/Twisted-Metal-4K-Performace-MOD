@@ -3,9 +3,11 @@
 Status: Der Nutzer hat das Video selbst hochgeladen und am 18. Oktober 2026 den
 öffentlichen Link übergeben. Codex hat diesen Link mit klickbarem Vorschaubild
 in die englische und deutsche GitHub-README eingebaut; kein erneuter Video-Upload.
+Der Link wurde auf Wunsch des Nutzers durch dessen neues Video ersetzt;
+der vorherige Upload wurde vom Nutzer gelöscht.
 
-Video: https://www.youtube.com/watch?v=8QHzOk1Sldg
-Klickbare Vorschau: https://img.youtube.com/vi/8QHzOk1Sldg/hqdefault.jpg
+Video: https://www.youtube.com/watch?v=f8B3rxd-ToU
+Klickbare Vorschau: https://img.youtube.com/vi/f8B3rxd-ToU/hqdefault.jpg
 
 Die folgenden Texte bleiben Metadaten-Vorschläge, keine unabhängig geprüfte
 Abschrift des aktuell auf YouTube verwendeten Titels oder Beschreibungstextes.

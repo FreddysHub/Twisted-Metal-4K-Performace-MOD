@@ -48,9 +48,9 @@ Vorhandene RenderDoc-Replay-Exporte in 1920 × 1080. Keine neuen Screenshots des
 
 ## Gameplay-Video
 
-[![Twisted Metal 4K – Video von FreddysHub auf YouTube ansehen](https://img.youtube.com/vi/8QHzOk1Sldg/hqdefault.jpg)](https://www.youtube.com/watch?v=8QHzOk1Sldg)
+[![Twisted Metal 4K – Video von FreddysHub auf YouTube ansehen](https://img.youtube.com/vi/f8B3rxd-ToU/hqdefault.jpg)](https://www.youtube.com/watch?v=f8B3rxd-ToU)
 
-**[▶ Video direkt auf YouTube ansehen](https://www.youtube.com/watch?v=8QHzOk1Sldg)**
+**[▶ Video direkt auf YouTube ansehen](https://www.youtube.com/watch?v=f8B3rxd-ToU)**
 — ein Klick auf das Vorschaubild öffnet das Video. Von FreddysHub am 18. Oktober 2026 geteilt.
 Die Aufnahme zeigt einen Testlauf, keine garantierte Leistung auf jedem PC.
 
