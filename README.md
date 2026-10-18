@@ -22,7 +22,7 @@
 </p>
 
 > [!IMPORTANT]
-> **Fully playable with the 4K version installed and configured as documented.** FreddysHub confirms this status from hands-on gameplay on the test system below. The known Metro Square rendering issue remains documented; fully playable does not mean bug-free or guaranteed 60 FPS on every PC.
+> **Fully playable with the 4K version installed and configured as documented.** FreddysHub confirms this status from hands-on gameplay on the test system below.
 >
 > **This repository provides the mod's source code and build instructions, not the game itself.** Bring your own legally obtained game, matching update and PS3 firmware. This is a community modification, not an official RPCS3 or Sony release.
 
@@ -116,10 +116,12 @@ Please report build, CPU/GPU/driver, scene and cache state. Do not upload game d
 
 ## Known issue — Metro Square
 
-The maintainer reports a remaining visibility issue near the **ice rink exit**:
-after returning from the rink to the street, **looking left** can make the
-bridge and parts of the surrounding world textures disappear in that corner.
-This area still needs investigation; the underlying cause is not confirmed.
+The maintainer reports a localized, temporary visibility issue: when
+**leaving the ice rink, returning to the street and driving left**, textures
+around the bridge in that corner can sometimes briefly disappear.
+**The rest of the map continues to display normally. After driving a few
+metres farther, the affected area displays normally again.**
+The underlying cause is not confirmed.
 
 **Important when testing a fix:** preserve the distant detail of the
 **glowing, red-leaved trees**, including those beyond the drivable map boundary.

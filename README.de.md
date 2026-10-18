@@ -8,7 +8,7 @@
 </p>
 
 > [!IMPORTANT]
-> **Mit korrekt installierter und eingerichteter 4K-Version vollständig spielbar.** FreddysHub bestätigt diesen Stand aus eigenen Spieltests auf dem unten genannten Testsystem. Der bekannte Grafikfehler in Metro Square bleibt dokumentiert; vollständig spielbar bedeutet nicht fehlerfrei oder garantierte 60 FPS auf jedem PC.
+> **Mit korrekt installierter und eingerichteter 4K-Version vollständig spielbar.** FreddysHub bestätigt diesen Stand aus eigenen Spieltests auf dem unten genannten Testsystem.
 >
 > **Dieses Repository enthält den Mod-Quellcode und die Bauanleitungen, nicht das Spiel selbst.** Eigene rechtmäßig bezogene Spieldaten, passendes Update und PS3-Firmware erforderlich. Kein offizieller RPCS3-/Sony-Release.
 
@@ -96,10 +96,13 @@ Sicherheitsfunktionen für den Nachbau abschalten.
 
 ## Bekannter Fehler — Metro Square
 
-In **Metro Square**, bei der **Ausfahrt von der Eisbahn zurück auf die Straße**,
-können beim **Blick nach links** die Brücke und Teile der Umgebungstexturen
-in dieser Ecke verschwinden. Das wurde vom Projektbetreiber beobachtet und
-muss noch untersucht werden; die genaue Ursache ist nicht bestätigt.
+In **Metro Square** gibt es laut Spieltests des Projektbetreibers einen örtlich
+begrenzten, vorübergehenden Darstellungsfehler: Wenn man **die Eisbahn verlässt,
+zurück auf die Straße kommt und nach links fährt**, können die Texturen im
+Bereich der Brücke in dieser Ecke manchmal kurzzeitig verschwinden.
+**Der Rest der Map wird weiterhin ganz normal angezeigt. Fährt man ein paar
+Meter weiter, ist auch der betroffene Bereich wieder normal sichtbar.**
+Die genaue Ursache ist noch nicht bestätigt.
 
 **Wichtig für weitere Fixes:** Die guten Ferndetails der **leuchtenden Bäume
 mit roten Blättern** müssen erhalten bleiben — auch bei den weit entfernten
