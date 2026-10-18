@@ -1,5 +1,18 @@
 # Reproduction evidence and limits
 
+## Current playability status — 18 October 2026
+
+FreddysHub confirms that the 4K version is **fully playable when installed and
+configured according to the current instructions** (3840 × 2160 internal
+rendering; 1280 × 720 base at 300% scale). This is a hands-on maintainer report,
+not a claim that the mod is unplayable pending further development. The
+repository supplies source/build instructions rather than a bundled game.
+
+The known Metro Square visibility issue remains listed in both READMEs.
+1080p and 1440p internal profiles are not supported yet. This report does not
+establish bug-free play, a completed independent campaign test, identical
+results on every GPU or a guaranteed frame rate.
+
 ## Distinguish the runs
 
 | Record | What it establishes | What it does not establish |

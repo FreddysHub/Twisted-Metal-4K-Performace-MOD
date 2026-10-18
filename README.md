@@ -22,7 +22,9 @@
 </p>
 
 > [!IMPORTANT]
-> **Source/build package, not a ready-to-play game download.** Bring your own legally obtained game, matching update and PS3 firmware. This is an experimental community modification, not an official RPCS3 or Sony release. Performance and compatibility depend on hardware, scene and cache state; 60 FPS is a target, not a guarantee.
+> **Fully playable with the 4K version installed and configured as documented.** FreddysHub confirms this status from hands-on gameplay on the test system below. The known Metro Square rendering issue remains documented; fully playable does not mean bug-free or guaranteed 60 FPS on every PC.
+>
+> **This repository provides the mod's source code and build instructions, not the game itself.** Bring your own legally obtained game, matching update and PS3 firmware. This is a community modification, not an official RPCS3 or Sony release.
 
 **Game not included:** you must own and provide your own matching Twisted Metal
 (PS3) game dump. This repository does not supply or link to game downloads,
@@ -108,7 +110,7 @@ There is **no precompiled release attached** at this publication checkpoint. Git
 
 A separate source rebuild on the development PC passed **38 compute-shader variants**, **46 recipe/runtime checks** and a loader test; both generated Times archives matched their expected hashes. Installed toolchains and dependencies were used, so this is **not** a completely fresh-machine certification.
 
-Later Test 4 notes report menu startup and user gameplay, including initial visual issues. These are distinct runs, not a cross-vendor certification or a full campaign/stability benchmark. [Evidence and limits](docs/REPRODUCTION.md).
+Later Test 4 notes report menu startup and user gameplay, including initial visual issues. On 18 October 2026, FreddysHub confirmed that the correctly installed 4K version is fully playable. This is the maintainer's gameplay report, distinct from the build checks; it is not a cross-vendor certification or an independently verified full-campaign/stability benchmark. [Evidence and limits](docs/REPRODUCTION.md).
 
 Please report build, CPU/GPU/driver, scene and cache state. Do not upload game data, saves, credentials or multi-gigabyte captures to an issue. [Contribution guide](CONTRIBUTING.md).
 

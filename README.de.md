@@ -8,7 +8,9 @@
 </p>
 
 > [!IMPORTANT]
-> **Quellcode und Bauanleitungen, kein fertiges Spiel.** Eigene rechtmäßig bezogene Spieldaten, passendes Update und PS3-Firmware erforderlich. Kein offizieller RPCS3-/Sony-Release. 3840 × 2160 und bis zu 60 FPS sind das Ziel, nicht auf jedem PC und in jeder Szene garantiert.
+> **Mit korrekt installierter und eingerichteter 4K-Version vollständig spielbar.** FreddysHub bestätigt diesen Stand aus eigenen Spieltests auf dem unten genannten Testsystem. Der bekannte Grafikfehler in Metro Square bleibt dokumentiert; vollständig spielbar bedeutet nicht fehlerfrei oder garantierte 60 FPS auf jedem PC.
+>
+> **Dieses Repository enthält den Mod-Quellcode und die Bauanleitungen, nicht das Spiel selbst.** Eigene rechtmäßig bezogene Spieldaten, passendes Update und PS3-Firmware erforderlich. Kein offizieller RPCS3-/Sony-Release.
 
 **Das PS3-Spiel ist nicht enthalten.** Jeder muss Twisted Metal selbst besitzen
 und den passenden eigenen Spieldump bereitstellen. Keine Spieldateien, Updates,
@@ -82,8 +84,11 @@ erwarteten Prüfsummen. Installierte Werkzeuge/Abhängigkeiten wurden verwendet:
 kein vollständiger Neu-PC-Nachweis.
 
 Spätere Test-4-Notizen dokumentieren Menüstart und Nutzer-Spieltests, auch
-anfängliche Grafikfehler. Getrennte Läufe, keine Kampagnenabnahme oder Prüfung
-aller GPU-Hersteller. [Teststatus](docs/REPRODUCTION.md).
+anfängliche Grafikfehler. Am 18. Oktober 2026 bestätigt FreddysHub die korrekt
+installierte 4K-Version als vollständig spielbar. Das ist die Rückmeldung des
+Projektbetreibers aus eigenen Spieltests, getrennt von den Bauprüfungen und
+keine unabhängig geprüfte Kampagnenabnahme oder Prüfung aller GPU-Hersteller.
+[Teststatus](docs/REPRODUCTION.md).
 
 Der Windows-Grafikkartentreiber wird **nicht verändert**. Modifiziert wird
 RPCS3s Vulkan-Renderer. Windows Auto HDR ist getrennt davon. Keine globalen
