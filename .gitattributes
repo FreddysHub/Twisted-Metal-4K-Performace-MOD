@@ -1,0 +1,3 @@
+# Patches must remain directly readable by git apply on every platform.
+# Unified-diff context lines deliberately start with a space (also before tabs).
+*.patch text eol=lf -whitespace

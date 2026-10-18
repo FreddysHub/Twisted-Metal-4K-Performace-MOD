@@ -29,6 +29,27 @@ No old RPCS3 EXE/objects or shader/SPU caches were used to fake the build.
 
 ## Actual build issue found
 
+### Published patch encoding corrected, 18 October 2026
+
+A user-reported independent rebuild encountered `No valid patches in input`.
+The published patch was confirmed to be UTF-16 LE with BOM and CRLF; the
+parsing failure was reproduced. It is now UTF-8 without BOM with LF endings.
+Strict decoding and an exact text comparison confirm that only encoding and
+line endings changed, not the patch instructions or code.
+
+`git apply --check` passes against a separate, clean checkout of RPCS3 commit
+`1707d7fc883ef48ff21bdcbb0141a3211ae09cb2`, covering all 11 patched files.
+The source checksum manifest was updated and `.gitattributes` enforces LF for
+patch files. [Machine-readable verification](evidence/patch-encoding-check.json).
+
+The user also reports that, after converting the old patch, the independent
+build and game startup succeeded on the first attempt. That report is separate
+from this encoding verification; no new compile or gameplay test was performed
+as part of the encoding-only fix. The encoding issue is unrelated to CPU/GPU
+performance or rendering settings.
+
+### Static/dynamic MSVC runtime mismatch in the earlier source rebuild
+
 The first clean link failed with 1287 LNK2038 runtime-library mismatches:
 LLVM used static release CRT, RPCS3 was generated with dynamic CRT.
 Reconfiguring with MultiThreaded/static MSVC runtime and rebuilding corrected

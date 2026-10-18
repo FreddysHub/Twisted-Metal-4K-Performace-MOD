@@ -60,6 +60,11 @@ Apply the full tracked patch, not just VKPresent.cpp. It includes renderer,
 shader-prologue and MSVC build changes. The eight additional TM4K headers are
 not contained in the tracked-file patch and must also be copied.
 
+The patch is stored as **UTF-8 without BOM, with LF line endings**. If an older
+download reports `No valid patches in input`, download the corrected patch:
+the previous UTF-16 LE/BOM encoding prevented Git from parsing it. The patch
+code is unchanged. [Encoding correction and clean-checkout test](docs/evidence/patch-encoding-check.json).
+
 ## 3. Configure, compile and deploy dependencies
 
 Replace the three dependency paths with your installation. `$llvm` must point

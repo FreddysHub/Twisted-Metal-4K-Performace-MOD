@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-18",
+  "patch": "03_QUELLCODE/tracked-changes.patch",
+  "base_commit": "1707d7fc883ef48ff21bdcbb0141a3211ae09cb2",
+  "before": {
+    "encoding": "UTF-16 LE",
+    "bom": true,
+    "line_endings": "CRLF",
+    "bytes": 246048,
+    "sha256": "BC35283C9B0D5A98FC69CCAA3CF2372FEA0BB174855AA732CF2D46E4CE3518BF",
+    "git_parse_error_reproduced": "No valid patches in input"
+  },
+  "after": {
+    "encoding": "UTF-8",
+    "bom": false,
+    "line_endings": "LF",
+    "bytes": 120745,
+    "sha256": "E1108C58BF9917C8825BB4487AC1B377629644B39A30972FEF3C1FBE844D76AE"
+  },
+  "verification": {
+    "decoded_text_identical_after_eol_normalization": true,
+    "patched_file_count": 11,
+    "separate_clean_checkout": true,
+    "git_apply_check_exit_code": 0,
+    "new_compile_performed": false,
+    "new_gameplay_test_performed": false
+  }
+}
